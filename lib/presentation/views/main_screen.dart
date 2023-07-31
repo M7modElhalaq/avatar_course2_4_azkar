@@ -21,6 +21,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int count = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,14 +47,33 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: ManagerColors.primaryColor,
-        onPressed: () {
-          setState(() {
-            count++;
-          });
-        },
-        child: Icon(Icons.add, color: ManagerColors.white70,),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            backgroundColor: ManagerColors.primaryColor,
+            onPressed: () {
+              setState(() {
+                count++;
+              });
+            },
+            child: Icon(Icons.add, color: ManagerColors.white70,),
+          ),
+          SizedBox(width: 12,),
+          FloatingActionButton(
+            backgroundColor: ManagerColors.primaryColor,
+            onPressed: () {
+              setState(() {
+                if(count > 0) {
+                  count--;
+                } else {
+                  count = 0;
+                }
+              });
+            },
+            child: Icon(Icons.remove, color: ManagerColors.white70,),
+          )
+        ],
       ),
       body: Stack(
         children: [
@@ -76,8 +96,8 @@ class _MainScreenState extends State<MainScreen> {
               decoration: BoxDecoration(
                 color: ManagerColors.primaryColor,
                 borderRadius: BorderRadius.circular(
-                ManagerRadius.r12,
-              ),
+                  ManagerRadius.r12,
+                ),
               ),
               child: baseText(
                 text: count.toString(),
