@@ -21,23 +21,23 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     print('Hello I am init state');
-    // Future.delayed(Duration(seconds: Constants.splashTime), () {
-    //   print('Hello I am in Future');
-    //   // Navigator.pushNamed(context, Routes.bioScreen);
-    //   Navigator.pushReplacementNamed(context, Routes.mainScreen);
-    //   // Navigator.push(
-    //   //   context,
-    //   //   MaterialPageRoute(
-    //   //     builder: (context) => const AboutScreen(),
-    //   //   ),
-    //   // );
-    //   // Navigator.pushReplacement(
-    //   //   context,
-    //   //   MaterialPageRoute(
-    //   //     builder: (context) => const AboutScreen(),
-    //   //   ),
-    //   // );
-    // });
+    Future.delayed(Duration(seconds: Constants.splashTime), () {
+      print('Hello I am in Future');
+      // Navigator.pushNamed(context, Routes.bioScreen);
+      Navigator.pushReplacementNamed(context, Routes.mainScreen);
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => const AboutScreen(),
+      //   ),
+      // );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => const AboutScreen(),
+      //   ),
+      // );
+    });
   }
 
   @override
