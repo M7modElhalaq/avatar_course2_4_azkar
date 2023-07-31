@@ -1,6 +1,6 @@
-import 'package:avatar_course2_4/presentation/about_screen.dart';
-import 'package:avatar_course2_4/presentation/main_screen.dart';
-import 'package:avatar_course2_4/presentation/splash_screen.dart';
+import 'package:avatar_course2_4/presentation/views/about_screen.dart';
+import 'package:avatar_course2_4/presentation/views/main_screen.dart';
+import 'package:avatar_course2_4/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'core/resources/manager_font_sizes.dart';
